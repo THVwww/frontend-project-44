@@ -1,19 +1,32 @@
 import readlineSync from 'readline-sync';
-export const prime = (a) => {
+console.log('Welcome to the Brain Games!')
+const name = readlineSync.question('May I have your name? ')
+console.log(`Hello, ${name}`)
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
+let rounds=0;
+export const prime = () => {
+        const x = Math.floor(Math.random() * 1000)
+    console.log(`Question:${x}`)
     const answer = readlineSync.question('Your answer: ');
-    const corectAnswer =  Math.floor(Math.random() * 100)
-    
-        for(let i = 0; i < corectAnswer; i++) {
-    const isEven = i / 1 &&  i % i === 0
-    if(isEven && answer === "yes"){
-        console.log("Correct!")
-    }
-    if(isEven && answer === "no"){
-        return "'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, !"
-       
-    }
+        const isEven = x / 1 && x % x === 0
+        if (isEven && answer === "yes") {
+            console.log("Correct!")
+            rounds +=1;
+        }
+        if (isEven && answer === "no") {
+            console.log(`'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`)
+            return
 
-}
-}
+        }
+        console.log(`Congratulations, ${name}!`)
+        if (rounds >0 && rounds <3) {
+            prime()
+           }
+           
+
+    }
+    
+    
+
 
 prime()
