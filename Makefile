@@ -19,3 +19,6 @@ brain-progression:
 
 brain-prime:
 	node bin/brain-prime.js
+	
+publish:
+	npm publish --dry-run
