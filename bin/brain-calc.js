@@ -23,7 +23,7 @@ export const calc = () => {
     }
     if (answer !== a + b && p==='+') {
         const s = a + b
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${s}'. Let's try again, ${name} !`)
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${s}'. Let's try again, ${name}!`)
     }
 
 
