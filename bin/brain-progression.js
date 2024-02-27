@@ -36,7 +36,8 @@ export const progression = () => {
         console.log('Correct!')
         rounds +=1;
     }else{
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questionChar}'. Let's try again, ${name}!`)
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questionChar}'.\nLet's try again, ${name}!`)
+        return false
     }
     function find(seq) {
         function compareNumbers(a, b) {

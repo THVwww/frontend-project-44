@@ -23,7 +23,8 @@ export const calc = () => {
     }
     if (answer !== a + b && p==='+') {
         const s = a + b
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${s}'. Let's try again, ${name}!`)
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${s}'.\nLet's try again, ${name}!`)
+        return false
     }
 
 
@@ -35,7 +36,8 @@ export const calc = () => {
     }
     if (answer !== a - b && p === '-') {
         const w = a - b
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${w}'. Let's try again, ${name}!`)
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${w}'.\nLet's try again, ${name}!`)
+        return false
     }
     if (answer === a * b) {
         console.log("Correct!")
@@ -43,7 +45,8 @@ export const calc = () => {
     }
     if (answer !== a * b && p==='*') {
         const y = a * b
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${y}'. Let's try again, ${name}!`)
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${y}'.\nLet's try again, ${name}!`)
+        return false
     }
 
     const OPERATION = {

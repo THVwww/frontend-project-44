@@ -15,8 +15,9 @@ export const prime = () => {
             rounds +=1;
         }
         if (isEven && answer === "no") {
-            console.log(`'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`)
-            return
+            console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}!`)
+            return false
+            
 
         }
         console.log(`Congratulations, ${name}!`)
