@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-console.log("Welcome to the Brain Games!")
+import cli  from "../src/cli.js"
 
-import {oddOrEven} from "../bin/brain-even.js"
-oddOrEven()
+cli()
