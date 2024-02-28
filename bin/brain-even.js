@@ -28,13 +28,14 @@ export const oddOrEven = () => {
     if(!isEven  && answer === "yes"){
         console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`)
     }
-    if(rounds === 3){
-        console.log(`Congratulations, ${name}!`)
-    }
-    if (rounds > 0 && rounds < 3) {
+    
+       
+        if (rounds > 0 && rounds < 3) {
         oddOrEven()
+        return false
        }
-}
+       console.log(`Congratulations, ${name}!`)
+    }
 
  
 oddOrEven()
