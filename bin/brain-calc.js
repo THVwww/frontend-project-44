@@ -7,8 +7,8 @@ console.log('What is the result of the expression?')
 
 let rounds = 0;
 export const calc = () => {
-    let a = Math.floor(Math.random() * 1000)
-    let b = Math.floor(Math.random() * 1000)
+    let a = Math.floor(Math.random() * 100)
+    let b = Math.floor(Math.random() * 100)
     const z = ['+', '-', '*']
     let p = z[Math.floor(z.length * Math.random())];
 
@@ -70,10 +70,12 @@ export const calc = () => {
                 break;    
         }
     }
-    console.log(`Congratulations, ${name}!`)
+
     if (rounds > 0 && rounds < 3) {
         calc()
+        return false
     }
+    console.log(`Congratulations, ${name}!`)
 }
 
 calc()

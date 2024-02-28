@@ -54,10 +54,13 @@ export const progression = () => {
         }
         
     }
-    console.log(`Congratulations, ${name}!`)
+  
     if (rounds > 0 && rounds < 3) {
         progression()
+        return false
     }
+    
+    console.log(`Congratulations, ${name}!`)
     
 }
 progression()
