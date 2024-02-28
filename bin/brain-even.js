@@ -27,6 +27,7 @@ export const oddOrEven = () => {
     }
     if(!isEven  && answer === "yes"){
         console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`)
+        return false
     }
     
        
