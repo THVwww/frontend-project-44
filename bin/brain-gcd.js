@@ -2,29 +2,30 @@
 import readlineSync from 'readline-sync';
 console.log('Welcome to the Brain Games!')
 const name = readlineSync.question('May I have your name? ')
-console.log(`Hello, ${name}`)
+console.log(`Hello, ${name}!`)
 console.log('Find the greatest common divisor of given numbers.')
 let rounds = 0;
 export const nd = () => {
-    let a = Math.floor(Math.random() * 100)
-    let b = Math.floor(Math.random() * 100)
-    console.log(`Question: ${a} ${b}`)
+    let x = Math.floor(Math.random() * 100)
+    let y = Math.floor(Math.random() * 100)
+    console.log(`Question: ${x} ${y}`)
     const answer = readlineSync.question('Your answer: ');
 
-    while (a != 0 && b != 0) {
-        if (a > b) {
-            a = a % b;
-            console.log(a)
-        } else {
-            b = b % a;
+    function NOD () {
+        for (var x = arguments[0], i = 1; i < arguments.length; i++) {
+          var y = arguments[i];
+          while (x && y) {
+            x > y ? x %= y : y %= x;
+          }
+          x += y;
         }
-       
-    }
-   if(answer === String(a)){
+        return x;
+      }
+  if(answer === String(x)){
     console.log('Correct!')
     rounds += 1
    }else{
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${a}'.\nLet's try again, ${name}!`)
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${x}'.\nLet's try again, ${name}!`)
     return false
    }
 
