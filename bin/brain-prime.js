@@ -11,27 +11,27 @@ export const prime = () => {
     const answer = readlineSync.question('Your answer: ');
         let i = 2;
         const isEven = Math.floor(Math.sqrt(x));
-        let answeru
+        let answerr
         if(x === 2){
-            answeru = 'yes';
+            answerr = 'yes';
         }
         if(x < 2){
-            answeru = 'no';
+            answerr = 'no';
         }
         while(i<= isEven){
             if(x % i === 0){
-                answeru = 'no';
+                answerr = 'no';
             }else{
-                answeru = 'yes';
+                answerr = 'yes';
             }
             i += 1
         }
 
-        if(answer === answeru){
+        if(answer === answerr){
             console.log("Correct!")
             rounds +=1;
         }else{
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answeru}'.\nLet's try again, ${name}!`)
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerr}'.\nLet's try again, ${name}!`)
         }
      
             
