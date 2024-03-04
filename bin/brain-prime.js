@@ -2,50 +2,45 @@
 import readlineSync from 'readline-sync';
 console.log('Welcome to the Brain Games!')
 const name = readlineSync.question('May I have your name? ')
-console.log(`Hello, ${name}`)
+console.log(`Hello, ${name}!`)
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
-let rounds=0;
+let rounds = 0;
 export const prime = () => {
-        const x = Math.floor(Math.random() * 100)
+    const x = Math.floor(Math.random() * 100)
     console.log(`Question: ${x}`)
-    const answer = readlineSync.question('Your answer: ');
-        let i = 2;
-        const isEven = Math.floor(Math.sqrt(x));
-        let answerr
-        if(x === 2){
-            answerr = 'yes';
-        }
-        if(x < 2){
-            answerr = 'no';
-        }
-        while(i<= isEven){
-            if(x % i === 0){
-                answerr = 'no';
-            }else{
-                answerr = 'yes';
-            }
-            i += 1
-        }
+    const answeru = readlineSync.question('Your answer: ');
+    let n = x;
+    let answer;
+    if (n < 2) {
+        answer= 'no';
+    }
+    if (n === 2) {
+        answer = 'yes';
+    }
 
-        if(answer === answerr){
-            console.log("Correct!")
-            rounds +=1;
+    let i = 2;
+    const limit = Math.sqrt(n);
+    while (i <= limit) {
+        if (n % i === 0) {
+            answer = 'no';
         }else{
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerr}'.\nLet's try again, ${name}!`)
+        answer= 'yes';
         }
-     
-            
+        i += 1;
+    }
 
-        
-        if (rounds >0 && rounds <3) {
-            prime()
-                return false
-                }
-            console.log(`Congratulations, ${name}!`)
-        }
-    
-    
-    
-
+    if (answeru === answer) {
+        console.log("Correct!")
+        rounds += 1;
+    } else {
+        console.log(`'${answeru}' is wrong answer ; (.Correct answer was '${answer}'.\nLet's try again, ${name}!`)
+        return false
+    }
+    if (rounds > 0 && rounds < 3) {
+        oddOrEven()
+        return false
+       }
+       console.log(`Congratulations, ${name}!`)
+    }
 
 prime()
