@@ -18,7 +18,7 @@ export const prime = () => {
     answer = 'yes';
   }
   if (x === 3) {
-    answer = 'yes'
+    answer = 'yes';
   }
 
   let i = 2;
@@ -49,3 +49,4 @@ export const prime = () => {
 };
 
 prime();
+export default prime

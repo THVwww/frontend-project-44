@@ -42,3 +42,4 @@ export const oddOrEven = () => {
 };
 
 oddOrEven();
+export default oddOrEven

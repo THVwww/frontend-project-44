@@ -81,3 +81,4 @@ export const calc = () => {
 };
 
 calc();
+export default calc

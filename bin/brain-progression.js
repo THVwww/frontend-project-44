@@ -62,3 +62,4 @@ export const progression = () => {
   console.log(`Congratulations, ${name}!`);
 };
 progression();
+export default progression
