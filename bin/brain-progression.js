@@ -24,7 +24,7 @@ function progressionGenerator(diff) {
 }
 
 export const progression = () => {
-    console.log(`Question: ${}`)
+    console.log(`Question: `)
     const num = [3, 10, 7]
     const com = num[Math.floor(num.length * Math.random())]
     console.log(progressionGenerator(com));
