@@ -1,15 +1,16 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-console.log("Welcome to the Brain Games!");
-const name = readlineSync.question("May I have your name? ");
+import readlineSync from 'readline-sync';
+
+console.log('Welcome to the Brain Games!');
+const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
-console.log("Find the greatest common divisor of given numbers.");
+console.log('Find the greatest common divisor of given numbers.');
 let rounds = 0;
 export const nd = () => {
-  let x = Math.floor(Math.random() * 100);
-  let y = Math.floor(Math.random() * 100);
+  const x = Math.floor(Math.random() * 100);
+  const y = Math.floor(Math.random() * 100);
   console.log(`Question: ${x} ${y}`);
-  const answer = readlineSync.question("Your answer: ");
+  const answer = readlineSync.question('Your answer: ');
 
   const smallest = x - y > 0 ? y : x;
   const arr = [];
@@ -20,11 +21,11 @@ export const nd = () => {
   }
   const rightAnswer = String(arr[arr.length - 1]);
   if (answer === rightAnswer) {
-    console.log("Correct!");
+    console.log('Correct!');
     rounds += 1;
   } else {
     console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`
+      `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`,
     );
     return false;
   }

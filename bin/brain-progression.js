@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-console.log("Welcome to the Brain Games!");
-const name = readlineSync.question("May I have your name? ");
+import readlineSync from 'readline-sync';
+
+console.log('Welcome to the Brain Games!');
+const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}`);
-console.log("What number is missing in the progression?");
+console.log('What number is missing in the progression?');
 let questionCharIndex;
 let questionChar;
 let rounds = 0;
@@ -17,23 +18,23 @@ function progressionGenerator(diff) {
   }
   questionCharIndex = Math.floor(Math.random() * numbers.length);
   questionChar = numbers[questionCharIndex];
-  numbers[questionCharIndex] = "..";
+  numbers[questionCharIndex] = '..';
   numbers.toString();
-  console.log(`Question: ${numbers.join(" ")}`);
+  console.log(`Question: ${numbers.join(' ')}`);
 }
 export const progression = () => {
   const num = [3, 10, 7];
   const com = num[Math.floor(num.length * Math.random())];
   console.log(progressionGenerator(com));
 
-  const answer = parseInt(readlineSync.question("Your answer: "));
+  const answer = parseInt(readlineSync.question('Your answer: '));
 
   if (answer === questionChar) {
-    console.log("Correct!");
+    console.log('Correct!');
     rounds += 1;
   } else {
     console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${questionChar}'.\nLet's try again, ${name}!`
+      `'${answer}' is wrong answer ;(. Correct answer was '${questionChar}'.\nLet's try again, ${name}!`,
     );
     return false;
   }
