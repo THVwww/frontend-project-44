@@ -13,7 +13,7 @@ function progressionGenerator(diff) {
   const numbers = [startNumber];
   let proressionEl = startNumber;
   for (let i = 0; i < 7; i++) {
-    proressionEl = proressionEl + diff;
+    proressionEl += proressionEl + diff;
     numbers.push(proressionEl);
   }
   questionCharIndex = Math.floor(Math.random() * numbers.length);
@@ -43,10 +43,10 @@ export const progression = () => {
     function compareNumbers(a, b) {
       return a - b;
     }
-    let arr = [...seq].sort(compareNumbers);
+    const arr = [...seq].sort(compareNumbers);
 
-    let difference = arr[1] - arr[0];
-    let arrLen = arr.length;
+    const difference = arr[1] - arr[0];
+    const arrLen = arr.length;
     let i = 0;
     while (i < arrLen) {
       if (arr[i + 1] - arr[i] !== difference) return arr[i] + difference;

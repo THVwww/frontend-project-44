@@ -56,7 +56,7 @@ export const calc = () => {
     substract: '-',
     multiply: '*',
   };
-  function conculate({a, b, operation}) {
+  function conculate({operation }) {
     let result = null;
     switch (operation) {
       case OPERATION.sum:
