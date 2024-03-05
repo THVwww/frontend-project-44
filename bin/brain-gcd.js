@@ -38,4 +38,4 @@ export const nd = () => {
 };
 
 nd();
-export default nd
+export default nd;

@@ -49,4 +49,4 @@ export const prime = () => {
 };
 
 prime();
-export default prime
+export default prime;
