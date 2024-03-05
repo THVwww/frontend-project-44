@@ -11,7 +11,7 @@ function progressionGenerator(diff) {
     const startNumber = Math.floor(Math.random() * 100)
     const numbers = [startNumber]
     let proressionEl = startNumber;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         proressionEl = proressionEl + diff
         numbers.push(proressionEl)
 
