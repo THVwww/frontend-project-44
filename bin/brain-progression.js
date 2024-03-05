@@ -19,19 +19,17 @@ function progressionGenerator(diff) {
      questionCharIndex = Math.floor(Math.random() * numbers.length)
      questionChar = numbers[questionCharIndex] 
     numbers[questionCharIndex] = '..'
-
-    return numbers
-}
-
-export const progression = () => {
-    console.log(`Question: `)
-    const num = [3, 10, 7]
-    const com = num[Math.floor(num.length * Math.random())]
-    console.log(progressionGenerator(com));
-    
+     numbers.toString();
+     console.log(`Question: ${numbers.join(' ')}`);
+};
+     export const progression = () => {
+         const num = [3, 10, 7];
+         const com = num[Math.floor(num.length * Math.random())]
+         console.log(progressionGenerator(com));
+         
 
     const answer = parseInt(readlineSync.question('Your answer: '));
-
+    
    if(answer === questionChar){
         console.log('Correct!')
         rounds +=1;
@@ -39,6 +37,8 @@ export const progression = () => {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questionChar}'.\nLet's try again, ${name}!`)
         return false
     }
+
+
     function find(seq) {
         function compareNumbers(a, b) {
             return a - b;

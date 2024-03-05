@@ -6,22 +6,21 @@ console.log(`Hello, ${name}!`)
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
 let rounds = 0;
 export const prime = () => {
-    const x = Math.floor(Math.random() * 100)
+    const x = Math.floor(Math.random() * 10)
     console.log(`Question: ${x}`)
     const answeru = readlineSync.question('Your answer: ');
-    let n = x;
     let answer;
-    if (n < 2) {
+    if (x < 2) {
         answer= 'no';
     }
-    if (n === 2) {
+    if (x === 2) {
         answer = 'yes';
     }
 
     let i = 2;
-    const limit = Math.sqrt(n);
+    const limit = Math.sqrt(x);
     while (i <= limit) {
-        if (n % i === 0) {
+        if (x % i === 0) {
             answer = 'no';
         }else{
         answer= 'yes';
@@ -37,7 +36,7 @@ export const prime = () => {
         return false
     }
     if (rounds > 0 && rounds < 3) {
-        oddOrEven()
+        prime()
         return false
        }
        console.log(`Congratulations, ${name}!`)
