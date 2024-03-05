@@ -7,8 +7,8 @@ console.log(`Hello, ${name}!`);
 console.log('Find the greatest common divisor of given numbers.');
 let rounds = 0;
 export const nd = () => {
-  const x = Math.floor(Math.random() * 100);
-  const y = Math.floor(Math.random() * 100);
+  const x = Math.floor(Math.random() * 1000);
+  const y = Math.floor(Math.random() * 1000);
   console.log(`Question: ${x} ${y}`);
   const answer = readlineSync.question('Your answer: ');
 
