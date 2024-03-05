@@ -17,6 +17,9 @@ export const prime = () => {
   if (x === 2) {
     answer = 'yes';
   }
+  if (x === 3) {
+    answer = 'yes'
+  }
 
   let i = 2;
   const limit = Math.sqrt(x);
