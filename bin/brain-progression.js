@@ -13,7 +13,7 @@ function progressionGenerator(diff) {
   const numbers = [startNumber];
   let proressionEl = startNumber;
   for (let i = 0; i < 7; i++) {
-    proressionEl += proressionEl + diff;
+    proressionEl = proressionEl + diff;
     numbers.push(proressionEl);
   }
   questionCharIndex = Math.floor(Math.random() * numbers.length);
